@@ -158,10 +158,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to my blog garden, meet you.</p>
-<h4 id="什么是响应式布局？"><a href="#什么是响应式布局？" class="headerlink" title="什么是响应式布局？"></a>什么是响应式布局？</h4><p>响应式布局是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本,响应式布局可以为不同终端的用户提供更加舒适的界面和更好的用户体验。</p>
+<h4 id="一、什么是响应式布局？"><a href="#一、什么是响应式布局？" class="headerlink" title="一、什么是响应式布局？"></a>一、什么是响应式布局？</h4><p>响应式布局是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本,响应式布局可以为不同终端的用户提供更加舒适的界面和更好的用户体验。</p>
 <h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5><p>1.面对不同分辨率设备灵活性强<br>2.能够快捷解决多设备显示适应问题 </p>
 <h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><p>不能完全兼容所有浏览器，加载时间加长    </p>
-<h4 id="实现响应式布局的几种方法："><a href="#实现响应式布局的几种方法：" class="headerlink" title="实现响应式布局的几种方法："></a>实现响应式布局的几种方法：</h4><h5 id="1、meta标签"><a href="#1、meta标签" class="headerlink" title="1、meta标签"></a>1、meta标签</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="二、实现响应式布局的几种方法："><a href="#二、实现响应式布局的几种方法：" class="headerlink" title="二、实现响应式布局的几种方法："></a>二、实现响应式布局的几种方法：</h4><h5 id="1、meta标签"><a href="#1、meta标签" class="headerlink" title="1、meta标签"></a>1、meta标签</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>/&gt;</span></div></pre></td></tr></table></figure>
 <p>这主要是为了让代码适应移动端的屏幕，其中，viewport 是指需要加载meta 标签时读取的名字为“视口”，其中的 width 需要等于 device-width（设备宽度），主要是告诉浏览器，将布局视口的宽度设置为设备最理想的宽，initial-scale（缩放比例） 为1，这样就保证了加载的时候，要获取设备的宽度，同时要保持原始大小，便于媒体查询。</p>
 <h5 id="2、百分比"><a href="#2、百分比" class="headerlink" title="2、百分比"></a>2、百分比</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"float:left;width:70%;"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"float:right;width:30%;"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>通过将每个盒子的宽度设定百分比来实现。</p>
@@ -173,12 +173,14 @@
 <p>. col-sm-:小屏幕设备（平板），设备显示器最小768px,最大992px；</p>
 <p>. col-md-:中等屏幕设备（桌面），设备显示器最小992px,最大1200px；</p>
 <p>. col-lg-: 大等屏幕设备（桌面），设备显示器最小1200设备；</p>
-<h4 id="使用响应式布局的好处："><a href="#使用响应式布局的好处：" class="headerlink" title="使用响应式布局的好处："></a>使用响应式布局的好处：</h4><p>1、与以往的弹性盒子相比，响应式布局会更好的、更主动的根据用户设备变化更呈现出不同的效果，它比弹性盒子更灵活，可读性更强。</p>
+<h4 id="5、图片的自适应"><a href="#5、图片的自适应" class="headerlink" title="5、图片的自适应"></a>5、图片的自适应</h4><p>除了布局和文本，”响应式布局设计”还必须实现图片的自动缩放。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">img &#123; max-width: 100%;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="三、响应式布局兼容性"><a href="#三、响应式布局兼容性" class="headerlink" title="三、响应式布局兼容性:"></a>三、响应式布局兼容性:</h4><p>所有主流浏览器都支持这个设置，包括IE9。对于那些老式浏览器（主要是IE6、7、8），需要使用css3-mediaqueries.js。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">　<span class="comment">&lt;!--[if lt IE 9]&gt;</span></div><div class="line">　　　　&lt;script src="http://CSS3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"&gt;&lt;/script&gt;</div><div class="line">　　&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="四、使用响应式布局的好处："><a href="#四、使用响应式布局的好处：" class="headerlink" title="四、使用响应式布局的好处："></a>四、使用响应式布局的好处：</h4><p>1、与以往的弹性盒子相比，响应式布局会更好的、更主动的根据用户设备变化更呈现出不同的效果，它比弹性盒子更灵活，可读性更强。</p>
 <p>2、兼容性好，跨平台，移动设备尺寸参差不齐，版本定制通常只适用于固定规格的设备，但不适用分辨率变化较大的设备。</p>
 <p>3、方便改动，响应式设计是针对页面的，可以只对必要的页面进行改动，其他页面不受影响。</p>
-<h4 id="使用响应式布局的弊端："><a href="#使用响应式布局的弊端：" class="headerlink" title="使用响应式布局的弊端："></a>使用响应式布局的弊端：</h4><p>1、页面加载的代码多了，导致文件增大，影响加载速度。</p>
+<h4 id="五、使用响应式布局的弊端："><a href="#五、使用响应式布局的弊端：" class="headerlink" title="五、使用响应式布局的弊端："></a>五、使用响应式布局的弊端：</h4><p>1、页面加载的代码多了，导致文件增大，影响加载速度。</p>
 <p>2、局限性，对于响应式，局限性较大，不适合一些大型的门户网或者电商网站，一般门户网或电商网站一个界面内容较多，而响应式最忌讳较多内容，代码过多会影响运行速度。</p>
-<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>任何事物都是有利有弊的，根据自己的需求，选择适合自己的就是好的。</p>
+<h4 id="六、总结："><a href="#六、总结：" class="headerlink" title="六、总结："></a>六、总结：</h4><p>任何事物都是有利有弊的，根据自己的需求，选择适合自己的就是好的。</p>
 
       
 
